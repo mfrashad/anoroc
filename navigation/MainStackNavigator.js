@@ -51,7 +51,7 @@ export default function MainStackNavigator({ navigation, route }) {
         name="NearestHospital"
         component={NearestHospitalScreen}
         options={{
-          title: 'NearestHospital',
+          title: 'Nearest Hospital',
         }}
       />
     </MainStack.Navigator>

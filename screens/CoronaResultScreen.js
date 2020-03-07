@@ -36,12 +36,12 @@ export default class CoronaResultScreen extends React.Component {
         <View style={styles.suggestionContainer}>
           <Text style={styles.suggestionText}>Suggested Preventive Measure</Text>
           {!selected.mask &&
-            <TouchableOpacity onPress={() => {} } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('NearestHospital') } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
               <Text style={Styles.outlineButtonText}>Get masks from nearest place</Text>
             </TouchableOpacity>
           }
           {!selected.sanitize &&
-            <TouchableOpacity onPress={() => {} } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('NearestHospital') } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
               <Text style={Styles.outlineButtonText}>Get sanitizer from nearest place</Text>
             </TouchableOpacity>
           }
