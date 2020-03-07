@@ -1,7 +1,8 @@
 import React from 'react';
 import MapView, { Marker } from 'react-native-maps';
-import { StyleSheet, Text, View, Dimensions, Image, Picker} from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, Picker, TouchableOpacity} from 'react-native';
 import Layout from '../constants/Layout';
+import Styles from '../constants/Styles';
 
 const LATITUDE = 3.1209046
 const LONGITUDE = 101.6516527;
@@ -26,7 +27,7 @@ export default class NearestHospitalScreen extends React.Component {
         {key: 0, latlng: {latitude: LATITUDE, longitude: LONGITUDE}, title: "Hospital 1", description: ""},
         {key: 1, latlng: {latitude: LATITUDE + 0.003, longitude: LONGITUDE + 0.012}, title: "Hospital 2", description: ""},
         {key: 2, latlng: {latitude: LATITUDE + 0.023, longitude: LONGITUDE - 0.032}, title: "Hospital 3", description: ""},
-        {key: 3, latlng: {latitude: LATITUDE -0.11, longitude: LONGITUDE - 0.005}, title: "Hospital 3", description: ""}
+        {key: 3, latlng: {latitude: LATITUDE -0.11, longitude: LONGITUDE - 0.005}, title: "Hospital 4", description: ""}
       ],
       hospital: {latitude: LATITUDE, longitude: LONGITUDE}
     };
@@ -52,7 +53,7 @@ export default class NearestHospitalScreen extends React.Component {
           ))}
         </MapView>
         <View style={styles.card}>
-          <Image source={require('../assets/images/icon.png')} style={styles.logo}></Image>
+          <Image source={require('../assets/images/hospital.png')} style={styles.logo}></Image>
           <Text style={styles.logoSub}>Nearest hospitals for checkup.</Text>
           <Picker
             selectedValue={this.state.hospital}
@@ -64,6 +65,9 @@ export default class NearestHospitalScreen extends React.Component {
               <Picker.Item key={marker.key} label={marker.title} value={marker.latlng} />
             ))}
           </Picker>
+          <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, {width: 250, marginVertical: 10}]}>
+            <Text style={Styles.buttonText}>Book an Appointment</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -82,22 +86,23 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height,
   },
   logo: {
-    width: 60,
+    width: 50,
     resizeMode: 'contain',
-    height: 60,
+    height: 50,
     marginTop: 30,
+    marginBottom: 10
   },
   logoSub: {
     color: '#999999',
     marginBottom: 5,
+    fontSize: 16
   },
   card: {
     alignItems: 'center',
     position: 'absolute',
     elevation: 4,
-    height: 200,
-    width: Layout.window.width - 40,
-    height: 200,
+    width: 300,
+    height: 250,
     bottom: 20,
     paddingLeft: 10,
     paddingRight: 10,
