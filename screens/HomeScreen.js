@@ -2,22 +2,24 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Styles from '../constants/Styles';
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <Image source={require('../assets/images/icon-text.png')} style={styles.logo}></Image>
-      <Text style={styles.logoSub}>Agaisnt Corona</Text>
-      <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
-        <Text style={Styles.buttonText}>Corona Assesment</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
-        <Text style={Styles.buttonText}>Appointments</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
-        <Text style={Styles.buttonText}>Medical Record</Text>
-      </TouchableOpacity>
-    </View>
-  );
+export default class HomeScreen extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image source={require('../assets/images/icon-text.png')} style={styles.logo}></Image>
+        <Text style={styles.logoSub}>Agaisnt Corona</Text>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('CoronaTest') } style={[Styles.roundedButton, styles.buttonMargin]}>
+          <Text style={Styles.buttonText}>Corona Assesment</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
+          <Text style={Styles.buttonText}>Appointments</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
+          <Text style={Styles.buttonText}>Medical Record</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

@@ -7,9 +7,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
+import CoronaTestStackNavigator from './navigation/CoronaTestStackNavigator';
 import useLinking from './navigation/useLinking';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import CoronaTest from './screens/CoronaTestScreen';
 
 const Stack = createStackNavigator();
 
@@ -63,6 +65,9 @@ export default function App(props) {
             <Stack.Screen 
               name="Home"
               component={HomeScreen} />
+            <Stack.Screen
+              name="CoronaTest"
+              component={CoronaTestStackNavigator} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
