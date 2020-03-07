@@ -90,7 +90,7 @@ export default class CoronaQuestionScreen extends React.Component {
           </Text>
           { this.state.question.choices.map( choice => {
             return (
-              <TouchableOpacity onPress={this.nextChoice(choice.value)} style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
+              <TouchableOpacity key={choice.text} onPress={this.nextChoice(choice.value)} style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
                 <Text style={Styles.outlineButtonText}>{choice.text}</Text>
               </TouchableOpacity>
             )

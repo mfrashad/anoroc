@@ -7,11 +7,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
-import CoronaTestStackNavigator from './navigation/CoronaTestStackNavigator';
-import CoronaResultScreen from './screens/CoronaResultScreen';
+import MainStackNavigator from './navigation/MainStackNavigator';
 import useLinking from './navigation/useLinking';
 import LoginScreen from './screens/LoginScreen';
-import HomeScreen from './screens/HomeScreen';
+
 
 
 const Stack = createStackNavigator();
@@ -63,17 +62,9 @@ export default function App(props) {
             <Stack.Screen 
               name="Login"
               component={LoginScreen} />
-            <Stack.Screen 
+            <Stack.Screen
               name="Home"
-              component={HomeScreen} />
-            <Stack.Screen
-              name="CoronaTest"
-              component={CoronaTestStackNavigator} />
-            <Stack.Screen
-              headerShown={true}
-              screenOptions={{headerShown: true}}
-              name="CoronaResult"
-              component={CoronaResultScreen} />
+              component={MainStackNavigator} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

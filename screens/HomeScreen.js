@@ -8,7 +8,7 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Image source={require('../assets/images/icon-text.png')} style={styles.logo}></Image>
         <Text style={styles.logoSub}>Agaisnt Corona</Text>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('CoronaTest') } style={[Styles.roundedButton, styles.buttonMargin]}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('CoronaStart') } style={[Styles.roundedButton, styles.buttonMargin]}>
           <Text style={Styles.buttonText}>Corona Assesment</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
