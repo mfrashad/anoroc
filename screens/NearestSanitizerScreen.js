@@ -24,10 +24,10 @@ export default class NearestSanitizerScreen extends React.Component {
     this.state = {
       region: INITIAL_REGION,
       markers: [
-        {key: 0, latlng: {latitude: LATITUDE, longitude: LONGITUDE}, title: "Hospital 1", description: ""},
-        {key: 1, latlng: {latitude: LATITUDE + 0.013, longitude: LONGITUDE + 0.010}, title: "Hospital 2", description: ""},
-        {key: 2, latlng: {latitude: LATITUDE - 0.023, longitude: LONGITUDE - 0.022}, title: "Hospital 3", description: ""},
-        {key: 3, latlng: {latitude: LATITUDE + 0.14, longitude: LONGITUDE + 0.005}, title: "Hospital 4", description: ""}
+        {key: 0, latlng: {latitude: LATITUDE, longitude: LONGITUDE}, title: "Pharmacy 1", description: ""},
+        {key: 1, latlng: {latitude: LATITUDE + 0.013, longitude: LONGITUDE + 0.010}, title: "Drug Store 1", description: ""},
+        {key: 2, latlng: {latitude: LATITUDE - 0.023, longitude: LONGITUDE - 0.022}, title: "Drug Store 2", description: ""},
+        {key: 3, latlng: {latitude: LATITUDE + 0.14, longitude: LONGITUDE + 0.005}, title: "Convenience Store 1", description: ""}
       ],
       hospital: {latitude: LATITUDE, longitude: LONGITUDE}
     };

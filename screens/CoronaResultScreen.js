@@ -41,7 +41,7 @@ export default class CoronaResultScreen extends React.Component {
             </TouchableOpacity>
           }
           {!selected.sanitize &&
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('NearestHospital') } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('NearestSanitizer') } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
               <Text style={Styles.outlineButtonText}>Get sanitizer from nearest place</Text>
             </TouchableOpacity>
           }
