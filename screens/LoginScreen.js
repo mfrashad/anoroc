@@ -27,6 +27,7 @@ export default class LoginScreen extends React.Component {
     //   .then(() => this.props.navigation.navigate('Main'))
     //   .catch(error => this.setState({ errorMessage: error.message }))
     // console.log('handleLogin')
+    this.props.navigation.navigate('Home')
   }
 
   handleGoogleLogin = async () => {
