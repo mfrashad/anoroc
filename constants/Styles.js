@@ -14,16 +14,15 @@ export default {
         paddingVertical: 16,
         paddingHorizontal: 20,
         backgroundColor: Colors.primaryColor,
-        elevation: 3
     },
     outlineButton: {
-      backgroundColor: '#FFFFFF',
+      backgroundColor: 'rgba(0,0,0,0.0)',
       borderWidth: 1,
       borderColor: Colors.darkColor
     },
     outlineButtonText: {
       fontSize: 15,
-      color: '#141414'
+      color: Colors.darkColor
     },
     buttonText: {
       fontSize: 15,

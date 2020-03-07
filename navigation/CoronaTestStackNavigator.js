@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import CoronaTestScreen from '../screens/CoronaTestScreen';
+import CoronaQuestionScreen from '../screens/CoronaQuestionScreen';
 import Colors from '../constants/Colors';
 
 const CoronaTestStack = createStackNavigator();
@@ -17,12 +18,20 @@ export default function CoronaTestStackNavigator({ navigation, route }) {
       initialRouteName={INITIAL_ROUTE_NAME}
       screenOptions={{
         headerStyle: {backgroundColor: Colors.primaryColor},
-        headerTitleStyle: {color: 'white'}
+        headerTitleStyle: {color: 'white'},
+        headerTintColor: 'white',
       }}
     >
       <CoronaTestStack.Screen
         name="CoronaStart"
         component={CoronaTestScreen}
+        options={{
+          title: 'Corona Assessment',
+        }}
+      />
+      <CoronaTestStack.Screen
+        name="CoronaQuestion"
+        component={CoronaQuestionScreen}
         options={{
           title: 'Corona Assessment',
         }}

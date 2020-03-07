@@ -3,19 +3,21 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import Styles from '../constants/Styles';
 import Colors from '../constants/Colors';
 
-export default function CoronaTest() {
-  return (
-    <View style={styles.container}>
-      <Image source={require('../assets/images/icon-text.png')} style={styles.logo}></Image>
-      <Text
-        style={styles.introText}>
-          Hi Rashad, I can help you find how likely you are exposed to COVID-19 Outbreak and recommend you the appropriate preventive actions
-        </Text>
-      <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
-        <Text style={Styles.buttonText}>Start Assessment</Text>
-      </TouchableOpacity>
-    </View>
-  );
+export default class CoronaTest extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image source={require('../assets/images/icon-text.png')} style={styles.logo}></Image>
+        <Text
+          style={styles.introText}>
+            Hi Rashad, I can help you find how likely you are exposed to COVID-19 Outbreak and recommend you the appropriate preventive actions
+          </Text>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('CoronaQuestion') } style={[Styles.roundedButton, styles.buttonMargin]}>
+          <Text style={Styles.buttonText}>Start Assessment</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
