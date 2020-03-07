@@ -46,7 +46,7 @@ export default class CoronaResultScreen extends React.Component {
             </TouchableOpacity>
           }
           {prediction >= 50 &&
-            <TouchableOpacity onPress={() => {} } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('NearestHospital') } style={[Styles.roundedButton, Styles.outlineButton, styles.buttonMargin]}>
               <Text style={Styles.outlineButtonText}>Do Health checkup</Text>
             </TouchableOpacity>
           }

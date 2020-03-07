@@ -4,6 +4,7 @@ import CoronaTestScreen from '../screens/CoronaTestScreen';
 import CoronaQuestionScreen from '../screens/CoronaQuestionScreen';
 import HomeScreen from '../screens/HomeScreen';
 import CoronaResultScreen from '../screens/CoronaResultScreen';
+import NearestHospitalScreen from '../screens/NearestHospitalScreen';
 import Colors from '../constants/Colors';
 
 const MainStack = createStackNavigator();
@@ -44,6 +45,13 @@ export default function MainStackNavigator({ navigation, route }) {
         component={CoronaQuestionScreen}
         options={{
           title: 'Corona Assessment',
+        }}
+      />
+      <MainStack.Screen
+        name="NearestHospital"
+        component={NearestHospitalScreen}
+        options={{
+          title: 'NearestHospital',
         }}
       />
     </MainStack.Navigator>
