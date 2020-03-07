@@ -11,10 +11,10 @@ export default class HomeScreen extends React.Component {
         <TouchableOpacity onPress={() => this.props.navigation.navigate('CoronaStart') } style={[Styles.roundedButton, styles.buttonMargin]}>
           <Text style={Styles.buttonText}>Corona Assesment</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {} } style={[Styles.roundedButton, styles.buttonMargin]}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Appointment') } style={[Styles.roundedButton, styles.buttonMargin]}>
           <Text style={Styles.buttonText}>Appointments</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {}} style={[Styles.roundedButton, styles.buttonMargin]}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('MedicalRecord') }  style={[Styles.roundedButton, styles.buttonMargin]}>
           <Text style={Styles.buttonText}>Medical Record</Text>
         </TouchableOpacity>
       </View>
