@@ -3,7 +3,7 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import Styles from '../constants/Styles';
 import Colors from '../constants/Colors';
 
-export default class CoronaTest extends React.Component {
+export default class CoronaTestScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>

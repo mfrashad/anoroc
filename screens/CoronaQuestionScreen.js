@@ -59,18 +59,19 @@ export default class CoronaQuestionScreen extends React.Component {
     question: questions[0],
     questionIndex: 0,
     selected: {
-      "fever": [],
-      "mask": [],
-      "sanitize": [],
-      "location": [],
+      "fever": 0,
+      "mask": 0,
+      "sanitize": 0,
+      "location": 1,
     }
   }
 
   nextChoice = (value) => () => {
     let { questionIndex } = this.state;
 
-    if(questionIndex > questions.length){
+    if(questionIndex >= questions.length - 1){
       this.props.navigation.navigate('CoronaResult');
+      return;
     }
 
     if(questions[++questionIndex].order > 0 && value === false){

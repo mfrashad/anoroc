@@ -5,6 +5,8 @@ export default {
   primaryColor: '#5ECEF4',
   secondaryColor: '#4895FF',
   darkColor: '#696969',
+  red: '#c0392b',
+  green: '#27ae60',
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,
   tabBar: '#fefefe',
